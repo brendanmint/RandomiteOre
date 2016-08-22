@@ -1,14 +1,6 @@
 {
 <<<<<<< HEAD
     "homepage": "https://minecraft.curseforge.com/projects/randomite-ore/files",
-=======
-    "1.10.2": {
-        "1.2.0": "See: <Link>",
-        "1.1.0": "See: <Link>",
-        "1.0.0": "Initial Release"
-    },
-    "homepage": "https://minecraft.curseforge.com/projects/randomite-ore",
->>>>>>> origin/master
     "promos": {
         "1.10.2-recommended": "1.2.0",
         "1.10.2-latest": "1.2.0",
@@ -16,13 +8,10 @@
         "1.10.1-latest": "1.2.0",
         "1.10-recommended": "1.2.0",
         "1.10-latest": "1.2.0"
-<<<<<<< HEAD
     },
 	"1.10.2": {
         "1.2.0": "Update Checker and MetaData added to whitelist.",
         "1.1.0": "Adds Unstable Whitelists and changes a few things.",
         "1.0.0": "Initial Release"
-=======
->>>>>>> origin/master
     }
 }
