@@ -9,7 +9,7 @@
         "1.10-latest": "1.2.0"
     },
 	"1.10.2": {
-        "1.2.0": "Update Checker and MetaData added to whitelist.",
+        "1.2.0": "Adds Update Checker and MetaData can now be added to whitelist items/blocks.",
         "1.1.0": "Adds Unstable Whitelists and changes a few things.",
         "1.0.0": "Initial Release"
     }
