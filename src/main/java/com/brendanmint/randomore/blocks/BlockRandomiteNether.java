@@ -17,6 +17,8 @@ public class BlockRandomiteNether extends Block{
 
 	private static String oreDrop = "None";
 	private static int rando;
+	private static String[] oreHold = {"dye","5"};
+	private static int oreMeta;
 	
 	public BlockRandomiteNether() 
 	{
@@ -82,8 +84,20 @@ public class BlockRandomiteNether extends Block{
 		else 
 		{
 			oreDrop = ConfigHandler.randomiteUnstableWhiteListNether[RANDOM.nextInt(ConfigHandler.randomiteUnstableWhiteListNether.length)];
-			return Item.getByNameOrId(oreDrop);
+			if(oreDrop.contains("."))
+			{
+					oreHold = oreDrop.split("\\.");
+					oreMeta = Integer.parseInt(oreHold[1]);
+					return Item.getByNameOrId(oreHold[0]);
+			}
+			else return Item.getByNameOrId(oreDrop);
 		}
+	}
+	
+	@Override
+	public int damageDropped(IBlockState state) 
+	{
+		return oreMeta == 0 ? 0 : oreMeta;
 	}
 	
 	@Override
