@@ -1,0 +1,12 @@
+{
+    "1.10.2": {
+        "1.2.0": "See: <Link>",
+        "1.1.0": "See: <Link>",
+        "1.0.0": "Initial Release"
+    },
+    },
+    "homepage": "https://minecraft.curseforge.com/projects/randomite-ore",
+    "promos": {
+        "1.10.2-recomended": "1.2.0"
+    }
+}
