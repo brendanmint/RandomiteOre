@@ -91,6 +91,7 @@ public class BlockRandomite extends Block{
 		else 
 		{
 			oreDrop = ConfigHandler.randomiteUnstableWhiteList[RANDOM.nextInt(ConfigHandler.randomiteUnstableWhiteList.length)];
+			oreMeta = 0;
 			if(oreDrop.contains("."))
 			{
 					oreHold = oreDrop.split("\\.");
@@ -120,7 +121,7 @@ public class BlockRandomite extends Block{
 			else if(oreDrop == "minecraft:redStone") return 4 + RANDOM.nextInt(5);
 			else if(oreDrop == "minecraft:ender_pearl") return 1 + RANDOM.nextInt(2);
 			else if(oreDrop == "randomore:ItemUnstablePowder") return 2 + RANDOM.nextInt(4);
-			else return 2 + RANDOM.nextInt(4);
+			else return 4;
 		}
 		else return ConfigHandler.randomiteDropsUnstableBase + RANDOM.nextInt(ConfigHandler.randomiteDropsUnstableChance+1);
 	}

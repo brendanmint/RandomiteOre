@@ -6,6 +6,7 @@ public class Reference
 	public static final String NAME = "Randomite Ore Mod";
 	public static final String VERSION = "1.2.0";
 	public static final String ACCEPTEDMCVERSIONS = "[1.10.2]";
+	public static final String UPDATE_JSON = "https://raw.githubusercontent.com/brendanmint/RandomiteOre/master/update.json";
 	
 	public static final String GUIFACTORYLOCATION = "com.brendanmint.randomore.GUI.ConfigGUIFactory";
 	public static final String CLIENT_PROXYCLASS = "com.brendanmint.randomore.proxy.ClientProxy";

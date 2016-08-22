@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTEDMCVERSIONS,guiFactory = Reference.GUIFACTORYLOCATION)
+@Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTEDMCVERSIONS,guiFactory = Reference.GUIFACTORYLOCATION,updateJSON = Reference.UPDATE_JSON)
 public class RandomOre
 {
 	@Mod.Instance(Reference.MOD_ID)

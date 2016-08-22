@@ -4,6 +4,7 @@ item.unstablePowder.name=Unstable Powder
 tile.randomiteOre.name=Randomite Ore
 tile.randomiteOreNether.name=Nether Randomite Ore
 #configGUI
+configGUI.settings.general.tooltip=General Mod Settings.
 configGUI.settings.overworld.tooltip=Settings relating to the Randomite Ore block.
 configGUI.settings.overworld.generation.tooltip=Settings relating to the generation of Randomite Ore.\n[THIS WILL NOT AFFECT ALREADY GENERATED CHUNKS]
 configGUI.settings.nether.tooltip=Settings relating to the Nether Randomite Ore block.
