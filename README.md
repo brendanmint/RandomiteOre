@@ -1,2 +1,2 @@
 # RandomiteOre
-Randomite Ore mod for Minecraft that adds Randomite Ore and associated items/recipes.
+Mod for Minecraft that adds a new ore, a nether varient of that ore, and an item to help craft it.
