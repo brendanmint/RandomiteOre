@@ -1,0 +1,16 @@
+[
+{
+  "modid": "randomore",
+  "name": "Randomite Ore",
+  "description": "Adds Randomite Ore and related recipes.",
+  "version": "1.2.0",
+  "mcversion": "${mcversion}",
+  "url": "https://minecraft.curseforge.com/projects/randomite-ore",
+  "updateUrl": "",
+  "authorList": ["Brendanmint"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

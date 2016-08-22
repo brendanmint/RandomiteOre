@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "randomore:blocks/randomite_ore_nether"
+    }
+}
