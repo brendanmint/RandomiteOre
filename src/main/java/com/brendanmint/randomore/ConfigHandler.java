@@ -15,11 +15,14 @@ public class ConfigHandler
 	public static int randomiteSpawnSize;//How Large clumps are
 	public static int randomiteSpawnMin;//Lowest height
 	public static int randomiteSpawnMax;//Highest height
-	//Regular Item Spawn Values
+	//Unstable Item Spawn Values
 	public static String[] randomiteUnstableWhiteList = new String[]{};
 	public static String[] randomiteUnstableWhiteListDef = new String[]{"minecraft:coal","minecraft:iron_ore","minecraft:diamond","minecraft:gold_ore","minecraft:dye.4","minecraft:redstone","randomore:ItemUnstablePowder","minecraft:ender_pearl"};
 	public static int randomiteDropsUnstableBase; //When Unstable this is the minimum amount of items ore will drop.
 	public static int randomiteDropsUnstableChance; //When Unstable this random number is the amount of items the ore can drop in addition to the base number.
+	//Stable Item Spawns
+	public static String[] randomiteStableWhiteList = new String[]{};
+	public static String[] randomiteStableWhiteListDef = new String[]{"minecraft:coal+25","minecraft:iron_ore+25","minecraft:diamond+5","minecraft:gold_ore+10","minecraft:dye.4+12","minecraft:redstone+12","randomore:ItemUnstablePowder+9","minecraft:ender_pearl+2"};
 	
 	public static boolean randomiteStableNether;//Same as Above
 	public static int randomiteSpawnTriesNether;//How many times per chunk generator attempts to spawn nether ore
@@ -48,10 +51,10 @@ public class ConfigHandler
 	public static void syncConfig() 
 	{
         String cat;//Category
-
+        
         cat = "behavioroverworld";
         config.addCustomCategoryComment(cat, "Overworld Randomite Ore Settings");
-        randomiteStable = config.getBoolean("randomiteStable", cat,true, "True - Stable Ore: Randomite Ore will drop random amount of 1 item type.\nFalse - Unstable Ore: Randomite Ore will drop random amount of random item types.");
+        randomiteStable = config.getBoolean("randomiteStable", cat, true, "True - Stable Ore: Randomite Ore will drop random amount of 1 item type.\nFalse - Unstable Ore: Randomite Ore will drop random amount of random item types.");
         //Chance Settings
         randomiteDropsUnstableBase = config.getInt("randomiteDropsUnstableBase", cat, 3, 1, 20, "The base amount of random items Ore will drop when Unstable.");
         randomiteDropsUnstableChance = config.getInt("randomiteDropsUnstableChance", cat, 3, 0, 20, "The maximum amount of additional items the Ore may drop.\n(Final Ore drop is Base + (0-Chance))");

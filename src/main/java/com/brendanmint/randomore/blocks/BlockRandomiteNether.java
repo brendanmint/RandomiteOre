@@ -84,6 +84,7 @@ public class BlockRandomiteNether extends Block{
 		else 
 		{
 			oreDrop = ConfigHandler.randomiteUnstableWhiteListNether[RANDOM.nextInt(ConfigHandler.randomiteUnstableWhiteListNether.length)];
+			oreMeta = 0;
 			if(oreDrop.contains("."))
 			{
 					oreHold = oreDrop.split("\\.");
@@ -112,7 +113,7 @@ public class BlockRandomiteNether extends Block{
 			else if(oreDrop == "minecraft:quartz") return 4 + RANDOM.nextInt(4);
 			else if(oreDrop == "minecraft:ender_pearl") return 2 + RANDOM.nextInt(2);
 			else if(oreDrop == "randomore:ItemUnstablePowder") return 2 + RANDOM.nextInt(4);
-			else return  1;
+			else return  3;
 		}
 		else return ConfigHandler.randomiteDropsUnstableBaseNether + RANDOM.nextInt(ConfigHandler.randomiteDropsUnstableChanceNether+1);
 	}

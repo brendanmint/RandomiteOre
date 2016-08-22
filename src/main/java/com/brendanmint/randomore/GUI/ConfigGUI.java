@@ -17,14 +17,13 @@ public class ConfigGUI extends GuiConfig
 
 	public ConfigGUI(GuiScreen parentScreen) 
 	{
-		//super(parentScreen, new ConfigElement(ConfigHandler.config.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),"RandomOre",false,false,"Randomite Ore");
 		super(parentScreen, getConfigElements(parentScreen),Reference.MOD_ID,false,false,"Randomite Ore Advanced Configuration"); //Menus ^_^
 	}
 	
-	private static List<IConfigElement> getConfigElements(GuiScreen parent) {
+	private static List<IConfigElement> getConfigElements(GuiScreen parent) 
+	{
         List<IConfigElement> list = new ArrayList<IConfigElement>();
-
-        //list.add(new ConfigElement(ConfigHandler.config.getCategory("BehaviorOverworld".toLowerCase())));
+        
         list.add(categoryElement("behavioroverworld", "Overworld Randomite Ore Behavior", "configGUI.settings.overworld"));
         list.add(categoryElement("behaviornether", "Nether Randomite Ore Behavior", "configGUI.settings.nether"));
         list.add(categoryElement("overworldgen", "Overworld Ore Generation", "configGUI.settings.overworld.generation"));
