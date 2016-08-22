@@ -24,7 +24,6 @@ public class ConfigGUI extends GuiConfig
 	{
         List<IConfigElement> list = new ArrayList<IConfigElement>();
         
-        list.add(categoryElement("general", "General Settings", "configGUI.settings.general"));
         list.add(categoryElement("behavioroverworld", "Overworld Randomite Ore Behavior", "configGUI.settings.overworld"));
         list.add(categoryElement("behaviornether", "Nether Randomite Ore Behavior", "configGUI.settings.nether"));
         list.add(categoryElement("overworldgen", "Overworld Ore Generation", "configGUI.settings.overworld.generation"));

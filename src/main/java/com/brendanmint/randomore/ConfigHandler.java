@@ -10,8 +10,6 @@ public class ConfigHandler
 {
 	public static Configuration config;
 	
-	public static boolean updateCheck;//Should mod check for updates?
-	
 	public static boolean randomiteStable;//Stable - Random amount of 1 item. Unstable - Random amount of random items.
 	public static int randomiteSpawnTries;//How many times per chunk generator attempts to spawn ore
 	public static int randomiteSpawnSize;//How Large clumps are
@@ -50,9 +48,6 @@ public class ConfigHandler
 	public static void syncConfig() 
 	{
         String cat;//Category
-        
-        cat = "general";
-        updateCheck = config.getBoolean("updateCheck", cat, true, "Should mod check git for Updates?");
         
         cat = "behavioroverworld";
         config.addCustomCategoryComment(cat, "Overworld Randomite Ore Settings");
