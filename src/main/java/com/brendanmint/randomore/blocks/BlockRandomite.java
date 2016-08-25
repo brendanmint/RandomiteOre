@@ -72,14 +72,9 @@ public class BlockRandomite extends Block{
 				oreMeta = 4;
 				return Item.getByNameOrId(oreDrop);
 			}
-			else if(rando >= 80 && rando < 90)
+			else if(rando >= 80 && rando < 95)
 			{
 				oreDrop = "minecraft:redstone";
-				return Item.getByNameOrId(oreDrop);
-			}
-			else if(rando >= 90 && rando < 98)
-			{
-				oreDrop = "randomore:ItemUnstablePowder";
 				return Item.getByNameOrId(oreDrop);
 			}
 			else

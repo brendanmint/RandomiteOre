@@ -17,12 +17,12 @@ public class ConfigHandler
 	public static int randomiteSpawnMax;//Highest height
 	//Unstable Item Spawn Values
 	public static String[] randomiteUnstableWhiteList = new String[]{};
-	public static String[] randomiteUnstableWhiteListDef = new String[]{"minecraft:coal","minecraft:iron_ore","minecraft:diamond","minecraft:gold_ore","minecraft:dye.4","minecraft:redstone","randomore:ItemUnstablePowder","minecraft:ender_pearl"};
+	public static String[] randomiteUnstableWhiteListDef = new String[]{"minecraft:coal","minecraft:iron_ore","minecraft:diamond","minecraft:gold_ore","minecraft:dye.4","minecraft:redstone","minecraft:ender_pearl"};
 	public static int randomiteDropsUnstableBase; //When Unstable this is the minimum amount of items ore will drop.
 	public static int randomiteDropsUnstableChance; //When Unstable this random number is the amount of items the ore can drop in addition to the base number.
 	//Stable Item Spawns
 	public static String[] randomiteStableWhiteList = new String[]{};
-	public static String[] randomiteStableWhiteListDef = new String[]{"minecraft:coal+25","minecraft:iron_ore+25","minecraft:diamond+5","minecraft:gold_ore+10","minecraft:dye.4+12","minecraft:redstone+12","randomore:ItemUnstablePowder+9","minecraft:ender_pearl+2"};
+	public static String[] randomiteStableWhiteListDef = new String[]{"minecraft:coal-3+6","minecraft:iron_ore-3+5","minecraft:diamond-2+5","minecraft:gold_ore-2+4","minecraft:dye.4-5+12","minecraft:redstone-5+12","minecraft:ender_pearl-1+2"};
 	
 	public static boolean randomiteStableNether;//Same as Above
 	public static int randomiteSpawnTriesNether;//How many times per chunk generator attempts to spawn nether ore
@@ -31,7 +31,7 @@ public class ConfigHandler
 	public static int randomiteSpawnMaxNether;//Highest height
 	//Nether Item Spawn Values
 	public static String[] randomiteUnstableWhiteListNether = new String[]{};
-	public static String[] randomiteUnstableWhiteListDefNether = new String[]{"minecraft:coal","minecraft:iron_ore","minecraft:diamond","minecraft:gold_ore","minecraft:quartz","randomore:ItemUnstablePowder","minecraft:ender_pearl"};
+	public static String[] randomiteUnstableWhiteListDefNether = new String[]{"minecraft:coal","minecraft:iron_ore","minecraft:diamond","minecraft:gold_ore","minecraft:quartz","minecraft:ender_pearl"};
 	public static int randomiteDropsUnstableBaseNether; //When Unstable this is the minimum amount of items ore will drop.
 	public static int randomiteDropsUnstableChanceNether; //When Unstable this random number is the amount of items the ore can drop in addition to the base number.
 	
@@ -70,7 +70,7 @@ public class ConfigHandler
 
         cat = "overworldgen";
         config.addCustomCategoryComment(cat, "Overworld Ore Generation Settings");
-        randomiteSpawnTries = config.getInt("randomiteSpawnTries", cat, 30, 1, Integer.MAX_VALUE, "How many tries per chuck the generator should try to place Randomite Ore.");
+        randomiteSpawnTries = config.getInt("randomiteSpawnTries", cat, 17, 1, Integer.MAX_VALUE, "How many tries per chuck the generator should try to place Randomite Ore.");
         randomiteSpawnSize = config.getInt("randomiteSpawnSize", cat, 5, 1, 50, "Maximum amount of Ore that should spawn together.\n('Veins' will be between 0 and this number)\n(To be replaced with VeinSize)\n");
         randomiteSpawnMin = config.getInt("randomiteSpawnMin", cat, 0, 0, Integer.MAX_VALUE, "Lowest Height Ore should spawn in Overworld.");
         randomiteSpawnMax = config.getInt("randomiteSpawnMax", cat, 90, 0, Integer.MAX_VALUE, "Highest Height Ore should spawn in Overworld.");

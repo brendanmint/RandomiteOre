@@ -65,14 +65,9 @@ public class BlockRandomiteNether extends Block{
 				oreDrop = "minecraft:gold_ore";
 				return Item.getByNameOrId(oreDrop);
 			}
-			else if(rando >= 65 && rando < 90)
+			else if(rando >= 65 && rando < 95)
 			{
 				oreDrop = "minecraft:quartz";
-				return Item.getByNameOrId(oreDrop);
-			}
-			else if(rando >= 90 && rando < 95)
-			{
-				oreDrop = "randomore:ItemUnstablePowder";
 				return Item.getByNameOrId(oreDrop);
 			}
 			else
