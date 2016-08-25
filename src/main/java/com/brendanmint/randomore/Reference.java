@@ -4,7 +4,7 @@ public class Reference
 {
 	public static final String MOD_ID = "randomore";
 	public static final String NAME = "Randomite Ore Mod";
-	public static final String VERSION = "1.2.0";
+	public static final String VERSION = "1.3.0";
 	public static final String ACCEPTEDMCVERSIONS = "[1.10.2]";
 	public static final String UPDATE_JSON = "https://raw.githubusercontent.com/brendanmint/RandomiteOre/master/update.json";
 	
