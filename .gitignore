@@ -2,7 +2,8 @@
 .settings
 .classpath
 .project
-build/
+/build/
 RandomiteOre_Client.launch
 RandomiteOre_Server.launch
 /bin/
+/run/
