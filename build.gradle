@@ -24,7 +24,7 @@ plugins {
 ext.configFile = file('build.properties')
 ext.config = parseConfig(configFile)
 
-version = "${config.version}-${config.mc_version}"
+version = "${config.version}-MC${config.mc_version}"
 group= "com.brendanmint.randomore" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "RandomiteOre"
 

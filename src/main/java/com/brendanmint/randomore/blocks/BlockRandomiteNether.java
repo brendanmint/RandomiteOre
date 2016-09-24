@@ -11,6 +11,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
 public class BlockRandomiteNether extends Block{
@@ -37,29 +38,15 @@ public class BlockRandomiteNether extends Block{
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) 
 	{
-		if(ConfigHandler.randomiteStableNether)
-		{
-			oreDrop = ConfigHandler.randomiteStableWhiteListNether[RANDOM.nextInt(ConfigHandler.randomiteStableWhiteListNether.length)];
-			if(oreDrop.contains("."))
-			{
-				oreHold = oreDrop.split("[.+-]");
-				System.out.println("oreHold: " + oreHold.length);
-				dropMax = Integer.parseInt(oreHold[3]);
-				dropMin = Integer.parseInt(oreHold[2]);
-				oreMeta = Integer.parseInt(oreHold[1]);
-				oreDrop = oreHold[0];
-			}
-			else
-			{
-				oreHold = oreDrop.split("[.+-]");
-				System.out.println("oreHold: " + oreHold.length);
-				dropMax = Integer.parseInt(oreHold[2]);
-				dropMin = Integer.parseInt(oreHold[1]);
-				oreMeta = 0;
-				oreDrop = oreHold[0];
-			}
-		}
+		setDrop();
 		super.breakBlock(worldIn, pos, state);
+	}
+	
+	@Override
+	public void onBlockDestroyedByExplosion(World worldIn, BlockPos pos, Explosion explosionIn) {
+		oreDrop = "minecraft:coal";
+		dropMax = 3;
+		super.onBlockDestroyedByExplosion(worldIn, pos, explosionIn);
 	}
 	
 	@Override
@@ -89,7 +76,37 @@ public class BlockRandomiteNether extends Block{
 	@Override
 	public int quantityDropped(Random random) 
 	{
-		if(ConfigHandler.randomiteStableNether) return dropMin + RANDOM.nextInt(dropMax - dropMin);
+		if(ConfigHandler.randomiteStableNether) 
+		{
+			if(dropMax - dropMin > 0) return dropMin + RANDOM.nextInt(dropMax - dropMin);
+			else return 0;
+		}
 		else return ConfigHandler.randomiteDropsUnstableBaseNether + RANDOM.nextInt(ConfigHandler.randomiteDropsUnstableChanceNether+1);
+	}
+	
+	public static void setDrop()
+	{
+		if(ConfigHandler.randomiteStableNether)
+		{
+			oreDrop = ConfigHandler.randomiteStableWhiteListNether[RANDOM.nextInt(ConfigHandler.randomiteStableWhiteListNether.length)];
+			if(oreDrop.contains("."))
+			{
+				oreHold = oreDrop.split("[.+-]");
+				System.out.println("oreHold: " + oreHold.length);
+				dropMax = Integer.parseInt(oreHold[3]);
+				dropMin = Integer.parseInt(oreHold[2]);
+				oreMeta = Integer.parseInt(oreHold[1]);
+				oreDrop = oreHold[0];
+			}
+			else
+			{
+				oreHold = oreDrop.split("[.+-]");
+				System.out.println("oreHold: " + oreHold.length);
+				dropMax = Integer.parseInt(oreHold[2]);
+				dropMin = Integer.parseInt(oreHold[1]);
+				oreMeta = 0;
+				oreDrop = oreHold[0];
+			}
+		}
 	}
 }
