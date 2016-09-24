@@ -1,5 +1,5 @@
 # RandomiteOre
-##Version: 1.3.0
+##Version: 1.3.1
 Mod for Minecraft that adds a new ore, a nether varient of that ore, and an item to help craft it.
 
 ##About
