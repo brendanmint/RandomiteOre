@@ -1,8 +1,8 @@
 #items
-item.unstablePowder.name=Unstable Powder
+item.unstable_powder.name=Unstable Powder
 #blocks
-tile.randomiteOre.name=Randomite Ore
-tile.randomiteOreNether.name=Nether Randomite Ore
+tile.randomite_ore.name=Randomite Ore
+tile.randomite_ore_nether.name=Nether Randomite Ore
 #configGUI
 configGUI.settings.general.tooltip=General Mod Settings.
 configGUI.settings.overworld.tooltip=Settings relating to the Randomite Ore block.
