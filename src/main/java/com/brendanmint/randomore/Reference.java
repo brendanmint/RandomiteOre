@@ -14,7 +14,7 @@ public class Reference
 	
 	public static enum randOreItems
 	{
-		UNSTABLEPOWDER("unstablePowder","item_unstable_powder");
+		UNSTABLEPOWDER("unstable_powder","unstable_powder");
 		private String unlocalisedName;
 		private String registryName;
 		
